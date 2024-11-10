@@ -1,0 +1,331 @@
+/* Navbar.module.css */
+.navbar {
+  position: fixed;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(192deg, #FF87FA 17%, #AF3CFF 100%);
+  padding: 15px 50px;
+  position: relative;
+}
+
+.navLogo a {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navMenu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+}
+
+.navItem {
+  display: inline-block;
+}
+
+.navLink {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #000000;
+}
+
+/* Hamburger menu (for mobile view) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 30px;
+  height: 21px;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .navMenu {
+    display: none; /* Hide the menu by default on small screens */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+    z-index: 5;
+  }
+
+  .navMenu.active {
+    display: flex; /* Show the menu when the active class is applied */
+  }
+
+  .hamburger {
+    display: flex; /* Show the hamburger menu on small screens */
+  }
+
+  .navItem {
+    text-align: center;
+    width: 100%;
+  }
+
+  .navLink {
+    padding: 15px;
+  }
+}
+
+
+/* Hero.module.css */
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000000a9;
+  background-image: url('/hero.webp');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2; /* Keep text above the background */
+  max-width: 800px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  font-size: 16px;
+    background-image: linear-gradient(192deg, #FF87FA 17%, #AF3CFF 100%);
+color: white;
+    outline: none;
+    border: none;
+    padding: 15px 50px;
+    border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  border: black; color: black;
+}
+
+/* Optional: Add a dark overlay on the background image */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1;
+}
+
+/* about */
+.about{
+  display: flex; 
+  align-items: center; justify-content: center;
+  padding: 50px;
+}
+.content{
+  padding-left: 50px;
+  width: 50%;
+}
+.content h1{
+  margin-bottom: 20px;
+}
+.content h4{
+  margin-bottom: 10px;
+}
+.content p{
+  margin-bottom: 20px; text-align: justify; padding-right: 30px;
+}
+.content button{
+  font-size: 16px;
+    background-image: linear-gradient(192deg, #FF87FA 17%, #AF3CFF 100%);
+color: white;
+    outline: none;
+    border: none;
+    padding: 15px 50px;
+    border-radius: 5px;
+}
+.content button:hover {
+  border: black; color: black;
+}
+
+.aboutImage{
+width: 680px;
+height: 380px;
+object-fit: cover;
+}
+
+/* skills */
+.skill{
+  padding: 30px 100px;
+}
+
+.expertise{
+  display: flex;
+  gap: 10px;
+  align-items: center; justify-content: space-between; flex-wrap: wrap;
+}
+.heading p{
+padding-top: 20px;
+}
+.skillImg{
+  margin: 20px;
+}
+
+.portfolio{
+  padding: 30px 100px;  
+}
+.items{
+  display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-evenly;
+}
+.portfolio p{
+  margin-top: 10px; margin-bottom: 10px; cursor: pointer;
+}
+
+.portImg{
+  width: 420px; height: 280px;  margin-top: 20px; object-fit: cover;
+}
+.content{
+  padding: 15px 0 20px 0;
+}
+
+.footer{
+  padding: 30px 100px; background-color: #333; display: flex; flex-wrap: wrap;
+  justify-content: space-between; color: white;
+}
+.pages p{
+  padding-top: 20px; cursor: pointer;
+}
+.pages h3{
+  padding-top: 20px;
+}
+.pages h1{
+  color: linear-gradient(192deg, #FF87FA 17%, #AF3CFF 100%); padding-top: 20px;
+}
+
+.contactinfo {
+  background-color: #ffffff; /* Clean white background */
+  padding: 30px 50px; /* Ample padding for breathing space */
+  border-radius: 12px; /* Smooth, rounded edges */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Softer, larger shadow for depth */
+  max-width: 700px; /* Restrict width for a more compact, centered look */
+  margin: 40px auto; /* Centering the box horizontally */
+  text-align: center;
+  font-family: 'Roboto', sans-serif; /* Professional, modern font */
+}
+
+.contactinfo h1 {
+  font-size: 2.5rem; /* Slightly larger heading */
+  font-weight: 600; /* Bold font for emphasis */
+  color: #333333; /* Darker gray for a sophisticated look */
+  margin-bottom: 20px; /* Spacing between heading and content */
+  letter-spacing: 1px; /* Slight spacing for a cleaner look */
+}
+
+.contactinfo p {
+  font-size: 1.2rem; /* Increase font size slightly */
+  color: #666666; /* Softer gray to contrast with the heading */
+  margin-bottom: 30px; /* Space below the paragraph */
+  font-style: italic; /* Adds a subtle stylistic touch */
+}
+
+.contactinfo h4 {
+  font-size: 1.3rem; /* Slightly larger for link headings */
+  color: #333333; /* Matching the heading for consistency */
+  margin: 20px 0; /* Even spacing between the social links */
+}
+
+.contactinfo a {
+  color: #0073b1; /* LinkedIn's blue color */
+  text-decoration: none; /* Clean, no underlines */
+  font-weight: 500; /* Slightly bold for clarity */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.contactinfo a:hover {
+  color: #005582; /* Darker shade on hover */
+  transform: scale(1.05); /* Subtle grow effect on hover */
+  text-decoration: underline; /* Underline on hover for UX */
+}
+
+.contactinfo h4:before {
+  font-size: 1.2rem; /* Slightly larger for the icons */
+  color: #0073b1; /* Matching the link color */
+}
+
+
+@media (max-width: 425px) {
+  .title {
+    font-size: 34px; padding: 0 20px 0 20px;
+  }
+  .about{
+    display: grid; 
+    padding: 20px;
+  }
+  .skill{
+    padding: 30px 40px;
+  }
+
+  
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+  .aboutImage{
+    width: 380px;
+    height: 200px;
+    margin-top: 20px;
+    object-fit: cover;
+    }
+    .content{
+      padding-left: 20px;
+      width: 100%;
+    }
+    .portfolio{
+      padding: 30px 40px; 
+    }
+    .portImg{
+      width: 320px; height: 240px;  margin-top: 20px; object-fit: cover;
+      
+    }
+    .portfolio h1{
+      font-size: 24px;
+    }
+    .portfolio p{
+      font-size: 14px;
+    }
+
+}
+
